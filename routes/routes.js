@@ -1,5 +1,4 @@
 const dns = require('dns');
-const path = require('path');
 const urlRegex = require('url-regex');
 const ShortURL = require('../models/ShortUrl');
 
@@ -39,9 +38,5 @@ module.exports = (app) => {
         res.redirect(shortUrl.originalURL);
       }
     });
-  });
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
   });
 };
