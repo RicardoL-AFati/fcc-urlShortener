@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 const mongoose = require('mongoose');
-const { mongoURI } = require('./keys');
+const { mongoURI } = require('./config/keys');
 const routes = require('./routes/routes');
 
 const app = express();
